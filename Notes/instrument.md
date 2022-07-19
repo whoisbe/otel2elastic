@@ -1,4 +1,5 @@
-# Instrument a Flask application to send traces to OpenTelemetry collector
+# Instrument a Flask application
+Instrument a Flask application to send traces to OpenTelemetry collector
 
  1. We are now ready to instrument a small python application using OpenTelemetry to get traces and send it to the collector.
  2. Change into the `Code` directory. Open the file `app.py` using your favorite code editor and examine the code.

@@ -1,4 +1,5 @@
-# Set up an Elastic deployment that will serve as the final destination for telemetry data
+# Set up an Elastic deployment
+Set up an Elastic deployment that will serve as the final destination for telemetry data
  1. Our goal is to get telemetry data to end up in Elastic Observability for analysis. So let's set up an Elastic deployment for that purpose.
  2. Go to [https://cloud.elastic.co](https://cloud.elastic.co) and sign in if you have an account. If you don't have an account, using the "Sign up" button (on the top right) you can sign up for a free 14 day trial account (no credit card required).
  3. Once signed in, create a deployment with default settings. It will take a few minutes for the deployment to be ready.

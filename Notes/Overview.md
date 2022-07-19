@@ -6,9 +6,9 @@ Our goal is to learn how to send OpenTelemetry data to Elastic Observability for
 
 In this guide, you will set up the pipeline in the following sequence.
 
- 1. [Set up an Elastic deployment that will serve as the final destination for telemetry data](deploy.md)
- 2. [Set up OpenTelemetry collector and configure it to export telemetry data to Elastic APM server](collect.md)
- 3. [Instrument the Flask application to send traces to the OpenTelemetry collector](instrument.md)
+ 1. [Set up an Elastic deployment](deploy.md) that will serve as the final destination for telemetry data
+ 2. [Set up OpenTelemetry collector](collect.md) and configure it to export telemetry data to Elastic APM server
+ 3. [Instrument a Flask application](instrument.md) to send traces to the OpenTelemetry collector
 
 
 [Previous](../README.md) \| [Next](deploy.md)

@@ -1,10 +1,11 @@
-# Set up OpenTelemetry collector and configure it to export telemetry data to Elastic APM server
+# Set up OpenTelemetry collector 
+Set up OpenTelemetry collector and configure it to export telemetry data to Elastic APM server
 
   1. Ensure you have [docker installed](https://docs.docker.com/desktop/#download-and-install) correctly and is working. `docker --version` should produce an output that looks something like `Docker version 20.10.12, build 20.10.12-0ubuntu4`.
   2. Clone this repo and change into the `Config` directory, open up the `collector-config.yaml` file in a text editor and examine it. Notice line# 9 contains exporter oltp/elastic added for Elastic APM server.
 ```bash
 git clone https://github.com/whoisbe/otel2elastic.git
-cd Config
+cd otel2elastic/Config
 vim collector-config.yaml
 ```
   3. Go back to the Elastic integration wizard that you left open in the last step of previous task and copy the value for `serverUrl` and paste it in as the value for `endpoint` in line# 10.
