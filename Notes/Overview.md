@@ -2,7 +2,7 @@
 
 Our goal is to set up the following data pipeline and learn about relevant concepts, required installations, configurations and options along the way. The pipeline consists of a simple Flask web application that will run in your host machine. The code will require instrumentation to export spans via OTLP. This data will be be sent to a local OpenTelemetry collector which will also require seting up in the same host as a container using a docker image. The collector should be configured to export the telemetry data to the final destination for analysis which is an Elastic observability deployment. 
 
-![data pipeline](pipeline.png)
+![data pipeline](pipeline.svg)
 
 In this guide, you will set up the pipeline in the following sequence.
 
