@@ -1,7 +1,7 @@
 # Instrument a Flask application
-Instrument a Flask application to send traces to OpenTelemetry collector
+Instrument a [Flask](https://palletsprojects.com/p/flask/) application to send traces to OpenTelemetry collector
 
- 1. We are now ready to instrument a small python application using OpenTelemetry to get traces and send it to the collector.
+ 1. We are now ready to instrument a small Python application using OpenTelemetry to get traces and send it to the collector.
  2. Change into the `Code` directory. Open the file `app.py` using your favorite code editor and examine the code.
  3. This app makes an external api call to obtain some data and returns part of the data. 
  4. As of now, there's no instrumentation in this code. You will need to install some libraries that's required to instrument this code.
@@ -21,7 +21,7 @@ pip install requests
 pip install opentelemetry-distro
 pip install opentelemetry-exporter-otlp
 ```
- 7. Let's now open `app.py` back up and instrument it to get tracing telemetry. Modify the code as seen below to initialize a tracer and use 
+ 7. Let's now open `app.py` back up and instrument it to get tracing telemetry. Modify the code to initialize a tracer and use it to get traces. Add the additional lines (that includes comments) in the snippet below. This code is also available in the file `instrumented.py` that you can rename to app.py to expedite this task.
 
 ```python
 from opentelemetry import trace # OpenTelemetry imports
@@ -49,8 +49,7 @@ def fetch_fact():
 ```bash
 opentelemetry-bootstrap -a install
 ```
- 9. Finally you can use `opentelemetry-instrument` to run the flask application along with instrumentation to get traces.
-
+ 9. Finally you can use `opentelemetry-instrument` to run the flask application along with instrumentation to get traces. The following command sends telemetry to localhost:4317, which is what the collector you setup in the previous step is listening on.
 ```bash
 opentelemetry-instrument --metrics_exporter none flask run
 ```
@@ -59,4 +58,4 @@ opentelemetry-instrument --metrics_exporter none flask run
  11. Get back to your Elastic deployment and navigate away from the wizard to Observability > APM. In APM, navigate to the Traces application.
  12.  You should be able to see traces corresponding to the number of times you accessed the /cat endpoint.
  
-You have successfully completed setting up the pipeline. Thanks for your time! I am happy to receive any feedback about my material!
+You have successfully completed setting up the pipeline. Thanks for your time! I am always happy to receive any feedback about my material!
