@@ -59,3 +59,5 @@ opentelemetry-instrument --metrics_exporter none flask run
  12.  You should be able to see traces corresponding to the number of times you accessed the /cat endpoint.
  
 You have successfully completed setting up the pipeline. Thanks for your time! I am always happy to receive any feedback about my material!
+
+[Previous](collect.md)
