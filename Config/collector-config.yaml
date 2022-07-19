@@ -1,0 +1,19 @@
+# collector-config.yaml
+receivers:
+  otlp:
+    protocols:
+      grpc:
+exporters:
+  logging:
+    loglevel: debug
+  otlp/elastic:
+    endpoint: 
+    headers: "Bearer 3qc4ZBbJHMlXzQe9r8"
+processors:
+  batch:
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      exporters: [logging, otlp/elastic]
+      processors: [batch]
