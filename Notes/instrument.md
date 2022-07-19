@@ -53,7 +53,9 @@ opentelemetry-bootstrap -a install
 ```bash
 opentelemetry-instrument --metrics_exporter none flask run
 ```
-
- 10. Now access http://127.0.0.1:5000/cat in your browser and refresh a few times to learn about some random cat facts and also send some traces to Elastic Observability.
- 11. Get back to your Elastic deployment and navigate to Observability > APM > Traces app using the side navigation.
+> Note: If you get a `TypeError: Descriptors cannot not be created directly` at this stage, kill the flask instance (ctrl-c) and downgrade your protobuf to 3.20.1 `pip install --upgrade "protobuf<=3.20.1"` and run the `opentelemetry-instrument` command again in step 9.  
+ 10. Now access http://127.0.0.1:5000/cat in your browser, refresh a few times and while you are at it, learn about some random cat facts. If everything is configured correctly, this should send some traces to Elastic Observability.
+ 11. Get back to your Elastic deployment and navigate away from the wizard to Observability > APM. In APM, navigate to the Traces application.
  12.  You should be able to see traces corresponding to the number of times you accessed the /cat endpoint.
+ 
+You have successfully completed setting up the pipeline. Thanks for your time! I am happy to receive any feedback about my material!
