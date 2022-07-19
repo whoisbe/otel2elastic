@@ -9,7 +9,16 @@ cd otel2elastic/Config
 vim collector-config.yaml
 ```
   3. Go back to the Elastic integration wizard that you left open in the last step of previous task and copy the value for `serverUrl` and paste it in as the value for `endpoint` in line# 10.
-  4. Once again, go back to the wizard and copy the value for `secretToken` and paste it in replacing the existing token value found in line# 12 after the word `Bearer`.
+  4. Once again, go back to the wizard and copy the value for `secretToken` and paste it in replacing the existing token value found in line# 12 after the word `Bearer`. Here is an example:
+```yaml
+exporters:
+  logging:
+    loglevel: debug
+  otlp/elastic:
+    endpoint: https://1a8zfad07dda44f8935b5d2e7a9cd844.apm.us-central1.gcp.cloud.es.io:443
+    headers:
+      Authorization: "Bearer 5lNpu2GOflkPWbY9Bi"
+```
   5. Save the file and copy it to `/tmp`
 
 ```bash
